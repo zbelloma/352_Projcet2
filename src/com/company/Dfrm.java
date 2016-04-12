@@ -6,29 +6,33 @@ package com.company;
 public class Dfrm {
 
     public int numResourceTypes;
-    private int[] numInstances;
+    public int[] numInstancesForThread;
 
-    public int Dfrm(int numResourceTypes, int[] numInstances) {
+    public Dfrm(int numResourceTypes, int[] numInstances) {
         if(numResourceTypes > 20){//resource types cannot be greater than 20
-            return -1;
+            //add Error as resourcetypes cannont be greater than 20
         }
 
         this.numResourceTypes = numResourceTypes;
-        this.numInstances = numInstances;
-        return 0;
+        this.numInstancesForThread = numInstances;
+        //return 0;
     }
 
     public boolean declare(int threadID, int[] numInstances){
+        for(int i = 0; i < numInstances.length; i++){
+            numInstancesForThread[i] = numInstances[i];  //sets max instances //need to test;
+        }
+        // need to add fail cases
 
+        return true;
+    }
+
+    public boolean request(int threadID, int numInstances[]){
 
 
         return true;
     }
 
-    public boolean request(int threadID, int numInstances){
-
-
-        return true;
+    public void finish(int id) {
     }
-
 }
