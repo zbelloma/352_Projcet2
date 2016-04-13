@@ -27,10 +27,15 @@ public class Dfrm {
         return true;
     }
 
-    public boolean request(int threadID, int numInstances[]){
+    public boolean request(int threadID, int[] numInstances){
 
 
         return true;
+    }
+
+    public boolean release(int threadID, int[] numInstances){
+
+        return false;
     }
 
     public void finish(int id) {

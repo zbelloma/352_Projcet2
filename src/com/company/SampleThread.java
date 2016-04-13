@@ -39,7 +39,7 @@ public class SampleThread extends Thread {
 
             Thread.sleep(5000);
 
-            if(myDfrm.release(id,numIns1)) {
+            if(myDfrm.release(id, numIns1)) {
                 System.out.printf("Thread %d releases resources of its 1st request\n", id);
             }
             Thread.sleep(5000);
